@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignify - viitor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="auth-container">
+            <h1>Homework Manager</h1>
+            <!-- Login Form -->
+            <div id="login-form">
+                <h2>Log In</h2>
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button id="login-button">Log In</button>
+                <p>Don't have an account? <span id="show-signup">Sign up</span></p>
+            </div>
+
+            <!-- Signup Form -->
+            <div id="signup-form" style="display: none;">
+                <h2>Sign Up</h2>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <button id="signup-button">Sign Up</button>
+                <p>Already have an account? <span id="show-login">Log in</span></p>
+            </div>
+        </div>
+
+        <!-- App Content (Hidden until logged in) -->
+        <div id="app-container" style="display: none;">
+            <div class="header">
+                <h1>My Homework Manager</h1>
+                <button id="logout-button">Log Out</button>
+            </div>
+            <div class="add-homework">
+                <input type="text" id="homework-input" placeholder="Enter homework title">
+                <button id="add-homework-button">Add Homework</button>
+            </div>
+            <div class="homework-list">
+                <h2>My Homework</h2>
+                <ul id="homework-items"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Your JavaScript -->
+    <script src="index.js"></script>
+</body>
+</html>
